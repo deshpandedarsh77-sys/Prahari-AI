@@ -1,0 +1,33 @@
+# ==============================================================================
+# PRAHARI-AI Surveillance System — Production Dependencies
+# ==============================================================================
+
+# --- Core Web & Streaming Framework ---
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+# NumPy 1.x has no supported CPython 3.13 Windows wheel and can resolve to
+# the experimental MinGW build. NumPy 2.x supports both Python 3.11 and 3.13.
+numpy>=2.1.0,<3.0.0
+opencv-python>=4.8.0.76
+
+# --- AI & Deep Learning Inference ---
+# Keep the base install usable on CPU-only low-end machines. The launcher
+# upgrades to matching CUDA wheels when an NVIDIA GPU is detected.
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+huggingface_hub>=0.20.0
+
+# --- OCR & ANPR Engines ---
+# PaddleOCR & PaddlePaddle (Alternative OCR engine)
+# paddlepaddle>=2.5.0
+# paddleocr>=2.7.0
+# EasyOCR (Active ANPR OCR engine)
+easyocr>=1.7.0
+
+# --- System & Telemetry Utilities ---
+psutil>=5.9.0
+requests>=2.28.0
+httpx>=0.24.0
+bcrypt>=4.1.0,<5.0.0
+PyJWT>=2.8.0,<3.0.0

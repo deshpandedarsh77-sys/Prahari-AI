@@ -1,0 +1,97 @@
+# ============================================================
+# PRAHARI-AI — GIT IGNORE POLICY
+# Complete repository hygiene, security, and runtime isolation
+# ============================================================
+
+# Python Bytecode & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+
+# System & OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.code-workspace
+
+# Runtime Databases & Local Backups
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+synced_events.json
+*.jsonl
+db_backups/
+
+# Snapshot Directories (Runtime Generated - Structure preserved via .gitkeep)
+static/alerts/*
+!static/alerts/.gitkeep
+static/anpr/*
+!static/anpr/.gitkeep
+static/anpr_debug/*
+!static/anpr_debug/.gitkeep
+
+# Temporary Scratches, Archives & Local Benchmarks
+scratch/
+scratch_archive.zip
+.system_generated/
+*.tmp
+*.bak
+temp/
+tmp/
+
+# External Infrastructure & Binaries (Installed separately - Locked by AGENTS.md)
+mediamtx/
+ffmpeg/
+test.mp4
+
+# Auto-generated SSL Certificates & Private Keys
+auto.crt
+auto.key
+*.crt
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Sensitive Secrets & Environment
+.env
+.env.*
+!.env.example
+*.secret
+secrets/
+credentials/
+
+# Node & Frontend Build Artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Experimental Training, Checkpoints & Datasets (Preserved locally, excluded from repo)
+dataset/
+dataset_v2/
+runs/
+wandb/
+mlruns/
+yolo26n.pt
+weights/candidates/
+weights/best.pt
+weights/last.pt
